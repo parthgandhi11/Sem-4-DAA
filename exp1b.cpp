@@ -4,20 +4,18 @@
 
 using namespace std;
 
-
-int main(){
+int main()
+{
     int n=100000;
     int arr[n];
 
     ofstream outdata;
     outdata.open("ArrValues.txt");
     
-    //random values filling
     for(int i=0;i<n;i++)
     {
         arr[i] = rand() % n;
-        outdata<<arr[i]<<", ";
-        // cout<<arr[i]<<", ";
+        cout<<arr[i]<<", ";
     }
     int copyarr[n];
     copy(arr,arr+n,copyarr);
@@ -45,7 +43,6 @@ int main(){
         start = chrono::high_resolution_clock::now();
         for(int j=0;j<i-2;j++)
         {
-            //finding the smallest element
             int min = j+1;
             for(int k=j+2;k<i;k++)
             {
